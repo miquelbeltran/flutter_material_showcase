@@ -1,41 +1,58 @@
+import 'package:example/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_material_showcase/flutter_material_showcase.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   // This widget is the root of your application.
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  Brightness brightness = Brightness.light;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
+        brightness: brightness,
         primarySwatch: Colors.blue,
+        accentColor: Colors.orangeAccent,
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Material Design Showcase'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Material Design Showcase'),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(brightness == Brightness.light
+                  ? Icons.wb_sunny
+                  : Icons.brightness_2),
+              onPressed: () {
+                switch (brightness) {
+                  case Brightness.dark:
+                    setState(() {
+                      brightness = Brightness.light;
+                    });
+                    break;
+                  case Brightness.light:
+                    setState(() {
+                      brightness = Brightness.dark;
+                    });
+                    break;
+                }
+              },
+            )
+          ],
+        ),
+        body: ListView(
+          children: <Widget>[
+            MaterialShowcase(),
+          ],
+        ),
       ),
-      body: ListView(children: <Widget>[
-        MaterialShowcase(),
-      ],),
     );
   }
 }
