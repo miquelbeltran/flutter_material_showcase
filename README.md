@@ -6,6 +6,8 @@ This project is a rip-off of Ataul's [Material Design Components Showcase](https
 
 You can use this Flutter package to preview your `ThemeData` and see how it looks like with different Material Widgets.
 
+![image](https://raw.githubusercontent.com/miquelbeltran/flutter_material_showcase/master/screenshot.png)
+
 ## Usage
 
 1. Include the library in your project `pubspec.yaml`:
