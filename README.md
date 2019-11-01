@@ -2,13 +2,44 @@
 
 Material Design components showcase for Flutter apps.
 
-## Getting Started
+This project is a rip-off of Ataul's [Material Design Components Showcase](https://github.com/ataulm/material-design-components-showcase) Android project, but in Flutter!
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+You can use this Flutter package to preview your `ThemeData` and see how it looks like with different Material Widgets.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Usage
+
+1. Include the library in your project `pubspec.yaml`:
+
+```
+todo
+```
+
+2. Add the `MaterialShowcase` Widget somewhere in your app:
+
+```
+MaterialApp(
+  title: 'Flutter Demo',
+  theme: ThemeData(
+        brightness: brightness,
+        primarySwatch: Colors.blue,
+  ),
+  home: Scaffold(
+    body: ListView(
+      children: <Widget>[
+        MaterialShowcase(),
+      ],
+    ),
+  ),
+);
+```
+
+3. Play with the different parameters in `ThemeData` and see how it looks like.
+
+## License
+
+```
+TODO
+```
+
+
+
