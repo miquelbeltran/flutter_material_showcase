@@ -16,12 +16,11 @@ todo
 
 2. Add the `MaterialShowcase` Widget somewhere in your app:
 
-```
+```dart
 MaterialApp(
   title: 'Flutter Demo',
   theme: ThemeData(
-        brightness: brightness,
-        primarySwatch: Colors.blue,
+    primarySwatch: Colors.blue,
   ),
   home: Scaffold(
     body: ListView(
