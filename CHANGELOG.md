@@ -1,3 +1,7 @@
+## [1.0.0+4] - Example README.md
+
+* Updated README.md for example app
+
 ## [1.0.0+2] - Formatting and description
 
 * flutter_material_showcase.dart formatting
