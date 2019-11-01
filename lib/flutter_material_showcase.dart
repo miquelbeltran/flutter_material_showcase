@@ -278,54 +278,57 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
   }
 
   Widget _buildText(context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          'Title',
-          style: Theme.of(context).textTheme.title,
-        ),
-        Text(
-          'Subtitle',
-          style: Theme.of(context).textTheme.subtitle,
-        ),
-        Text(
-          'Headline',
-          style: Theme.of(context).textTheme.headline,
-        ),
-        Text(
-          'Subhead',
-          style: Theme.of(context).textTheme.subhead,
-        ),
-        Text(
-          'Body 1',
-          style: Theme.of(context).textTheme.body1,
-        ),
-        Text(
-          'Body 2',
-          style: Theme.of(context).textTheme.body2,
-        ),
-        Text(
-          'Caption',
-          style: Theme.of(context).textTheme.caption,
-        ),
-        Text(
-          'Display 1',
-          style: Theme.of(context).textTheme.display1,
-        ),
-        Text(
-          'Display 2',
-          style: Theme.of(context).textTheme.display2,
-        ),
-        Text(
-          'Display 3',
-          style: Theme.of(context).textTheme.display3,
-        ),
-        Text(
-          'Display 4',
-          style: Theme.of(context).textTheme.display4,
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            'Title',
+            style: Theme.of(context).textTheme.title,
+          ),
+          Text(
+            'Subtitle',
+            style: Theme.of(context).textTheme.subtitle,
+          ),
+          Text(
+            'Headline',
+            style: Theme.of(context).textTheme.headline,
+          ),
+          Text(
+            'Subhead',
+            style: Theme.of(context).textTheme.subhead,
+          ),
+          Text(
+            'Body 1',
+            style: Theme.of(context).textTheme.body1,
+          ),
+          Text(
+            'Body 2',
+            style: Theme.of(context).textTheme.body2,
+          ),
+          Text(
+            'Caption',
+            style: Theme.of(context).textTheme.caption,
+          ),
+          Text(
+            'Display 1',
+            style: Theme.of(context).textTheme.display1,
+          ),
+          Text(
+            'Display 2',
+            style: Theme.of(context).textTheme.display2,
+          ),
+          Text(
+            'Display 3',
+            style: Theme.of(context).textTheme.display3,
+          ),
+          Text(
+            'Display 4',
+            style: Theme.of(context).textTheme.display4,
+          ),
+        ],
+      ),
     );
   }
 }
