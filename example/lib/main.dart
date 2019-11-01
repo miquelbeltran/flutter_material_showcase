@@ -1,4 +1,3 @@
-import 'package:example/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_material_showcase/flutter_material_showcase.dart';
 
