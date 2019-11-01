@@ -1,16 +1,15 @@
-# example
+# Example for flutter_material_showcase
 
-Example usage of Material Design component showcase.
+Run the project contained in `example` to check this package.
 
-## Getting Started
+You can edit the contained `ThemeData` to try different cases:
 
-This project is a starting point for a Flutter application.
+```dart
+theme: ThemeData(
+  brightness: brightness,
+  primarySwatch: Colors.blue,
+),
+```
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Also, use the action on the top-right of the screen to switch between light and dark themes,
+and see how your app reacts to it.
