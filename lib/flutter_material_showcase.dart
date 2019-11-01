@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 /// The [tabBackgroundColor] will default to [Colors.black26] if not set.
 ///
 class MaterialShowcase extends StatefulWidget {
-
   /// Creates a MaterialShowcase
   MaterialShowcase({
     Key key,
