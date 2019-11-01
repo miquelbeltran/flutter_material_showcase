@@ -2,7 +2,7 @@
 
 Material Design components showcase for Flutter apps.
 
-This project is a rip-off of Ataul's [Material Design Components Showcase](https://github.com/ataulm/material-design-components-showcase) Android project, but in Flutter!
+This project is based on Ataul's [Material Design Components Showcase](https://github.com/ataulm/material-design-components-showcase) Android project, but for Flutter!
 
 You can use this Flutter package to preview your `ThemeData` and see how it looks like with different Material Widgets.
 
@@ -10,10 +10,28 @@ You can use this Flutter package to preview your `ThemeData` and see how it look
 
 ## Usage
 
-1. Include the library in your project `pubspec.yaml`:
+1. Install
+
+Include the library in your project `pubspec.yaml`:
 
 ```
-todo
+dependencies:
+  flutter_material_showcase: ^1.0.0
+```
+
+You can install packages from the command line:
+
+```
+$ flutter pub get
+```
+
+Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
+
+
+Now in your Dart code, you can use:
+
+```
+import 'package:flutter_material_showcase/flutter_material_showcase.dart';
 ```
 
 2. Add the `MaterialShowcase` Widget somewhere in your app:
