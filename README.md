@@ -35,10 +35,17 @@ MaterialApp(
 
 3. Play with the different parameters in `ThemeData` and see how it looks like.
 
+## Contributing
+
+- Additions to the `MaterialShowcase` Widget are welcome.
+- Documentation improvements are welcome.
+
 ## License
 
 ```
-TODO
+MIT License
+
+Copyright (c) 2019 Miguel Beltran
 ```
 
 
