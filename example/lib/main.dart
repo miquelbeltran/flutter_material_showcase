@@ -20,7 +20,6 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: brightness,
         primarySwatch: Colors.blue,
-        accentColor: Colors.orangeAccent,
       ),
       home: Scaffold(
         appBar: AppBar(
