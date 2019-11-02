@@ -67,5 +67,7 @@ MIT License
 Copyright (c) 2019 Miguel Beltran
 ```
 
+Miguel Beltran - [beltran.work](https://beltran.work)
+
 
 
