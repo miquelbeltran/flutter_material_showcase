@@ -106,6 +106,7 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
         ),
         Radio(
           value: false,
+          groupValue: false,
           onChanged: (value) {},
         ),
       ],
