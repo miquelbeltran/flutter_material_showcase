@@ -10,31 +10,7 @@ You can use this Flutter package to preview your `ThemeData` and see how it look
 
 ## Usage
 
-1. Install
-
-Include the library in your project `pubspec.yaml`:
-
-```
-dependencies:
-  flutter_material_showcase: ^1.0.0
-```
-
-You can install packages from the command line:
-
-```
-$ flutter pub get
-```
-
-Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
-
-
-Now in your Dart code, you can use:
-
-```
-import 'package:flutter_material_showcase/flutter_material_showcase.dart';
-```
-
-2. Add the `MaterialShowcase` Widget somewhere in your app:
+Add the `MaterialShowcase` Widget somewhere in your app:
 
 ```dart
 MaterialApp(
@@ -52,7 +28,7 @@ MaterialApp(
 );
 ```
 
-3. Play with the different parameters in `ThemeData` and see how it looks like.
+Then play with the different parameters in `ThemeData` and see how it looks like.
 
 ## Contributing
 

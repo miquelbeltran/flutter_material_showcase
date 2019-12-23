@@ -1,3 +1,7 @@
+## [1.0.1] - Fixed warning
+
+* Fixed reported warning with Flutter 1.12
+
 ## [1.0.0+4] - Example README.md
 
 * Updated README.md for example app
