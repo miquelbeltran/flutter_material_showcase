@@ -1,7 +1,6 @@
 name: flutter_material_showcase
 description: Material Design components showcase for Flutter apps. Use this package to check your ThemeData against most Material widgets.
 version: 1.1.0
-author: Miguel Beltran <m@beltran.work>
 homepage: https://github.com/miquelbeltran/flutter_material_showcase
 
 environment:
