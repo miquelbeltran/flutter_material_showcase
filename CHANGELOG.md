@@ -1,3 +1,12 @@
+## [1.1.0] - New Components
+
+* Added Calendar
+* Added SimpleDialog
+* Updated text theme to new Material Design specs
+* Fixed warnings
+* Added new analysis_options and lint package
+
+
 ## [1.0.1] - Fixed warning
 
 * Fixed reported warning with Flutter 1.12

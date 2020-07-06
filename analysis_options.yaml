@@ -1,0 +1,17 @@
+# Lint rules and documentation, see http://dart-lang.github.io/linter/lints
+
+include: package:lint/analysis_options.yaml
+
+linter:
+  rules:
+    # Utils classes are OK
+    avoid_classes_with_only_static_members: false
+
+    # No need to do this on a private project
+    type_annotate_public_apis: false
+
+    # Make constructors the first thing in every class
+    sort_constructors_first: true
+
+    # Stick to single quotes
+    prefer_single_quotes: true

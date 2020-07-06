@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 ///
 class MaterialShowcase extends StatefulWidget {
   /// Creates a MaterialShowcase
-  MaterialShowcase({
+  const MaterialShowcase({
     Key key,
     this.tabBackgroundColor,
   }) : super(key: key);
@@ -57,6 +57,8 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
           _buildTabRow(context),
           _buildBottomNavigation(),
           _buildCard(),
+          _buildCalendar(),
+          _buildDialog(),
           _buildText(context),
         ],
       ),
@@ -115,16 +117,16 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
 
   Row _buildChoiceChipRow() {
     return Row(
-      children: <Widget>[
+      children: const <Widget>[
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: ChoiceChip(
             label: Text('Selected Chip'),
             selected: true,
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: ChoiceChip(
             label: Text('Not Selected Chip'),
             selected: false,
@@ -136,22 +138,22 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
 
   Row _buildChipRow() {
     return Row(
-      children: <Widget>[
+      children: const <Widget>[
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Chip(
             label: Text('Chip'),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Chip(
             label: Text('Avatar Chip'),
             avatar: FlutterLogo(),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: InputChip(
             label: Text('Input Chip'),
           ),
@@ -166,8 +168,8 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: FloatingActionButton(
-            child: Icon(Icons.accessibility),
             onPressed: () {},
+            child: Icon(Icons.accessibility),
           ),
         ),
         Padding(
@@ -177,8 +179,8 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
             onPressed: () {},
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
+        const Padding(
+          padding: EdgeInsets.all(8.0),
           child: CircleAvatar(
             child: Text('AV'),
           ),
@@ -195,8 +197,8 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: RaisedButton(
-              child: Text('Raised Button'),
               onPressed: () {},
+              child: const Text('Raised Button'),
             ),
           ),
         ),
@@ -204,8 +206,8 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: FlatButton(
-              child: Text('Flat Button'),
               onPressed: () {},
+              child: const Text('Flat Button'),
             ),
           ),
         )
@@ -220,15 +222,15 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.accessibility),
-            title: Text('Item 1'),
+            title: const Text('Item 1'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.accessibility),
-            title: Text('Item 2'),
+            title: const Text('Item 2'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.accessibility),
-            title: Text('Item 3'),
+            title: const Text('Item 3'),
           ),
         ],
       ),
@@ -241,7 +243,7 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
       child: Card(
         child: Container(
           height: 100,
-          child: Center(
+          child: const Center(
             child: Text('Material Card'),
           ),
         ),
@@ -253,23 +255,23 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
     return Column(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: TextField(
-            key: Key('TextField1'),
+            key: const Key('TextField1'),
             controller: _controller1,
-            decoration: InputDecoration(
-              hintText: "An Outline Border TextField",
+            decoration: const InputDecoration(
+              hintText: 'An Outline Border TextField',
               border: OutlineInputBorder(),
             ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: TextField(
-            key: Key('TextField2'),
+            key: const Key('TextField2'),
             controller: _controller2,
-            decoration: InputDecoration(
-              hintText: "A TextField",
+            decoration: const InputDecoration(
+              hintText: 'A TextField',
             ),
           ),
         ),
@@ -277,55 +279,79 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
     );
   }
 
-  Widget _buildText(context) {
+  Widget _buildCalendar() {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: CalendarDatePicker(
+        firstDate: DateTime(2019),
+        initialDate: DateTime.now(),
+        lastDate: DateTime.now().add(const Duration(days: 5)),
+        onDateChanged: (date) {},
+      ),
+    );
+  }
+
+  Widget _buildDialog() {
+    return SimpleDialog(
+      title: const Text('Title'),
+      children: <Widget>[
+        SimpleDialogOption(
+          onPressed: () {},
+          child: const Text('SimpleDialogOption'),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildText(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'Title',
-            style: Theme.of(context).textTheme.title,
+            'Headline 1',
+            style: Theme.of(context).textTheme.headline1,
           ),
           Text(
-            'Subtitle',
-            style: Theme.of(context).textTheme.subtitle,
+            'Headline 2',
+            style: Theme.of(context).textTheme.headline2,
           ),
           Text(
-            'Headline',
-            style: Theme.of(context).textTheme.headline,
+            'Headline 3',
+            style: Theme.of(context).textTheme.headline3,
           ),
           Text(
-            'Subhead',
-            style: Theme.of(context).textTheme.subhead,
+            'Headline 4',
+            style: Theme.of(context).textTheme.headline4,
           ),
           Text(
-            'Body 1',
-            style: Theme.of(context).textTheme.body1,
+            'Headline 5',
+            style: Theme.of(context).textTheme.headline5,
           ),
           Text(
-            'Body 2',
-            style: Theme.of(context).textTheme.body2,
+            'Headline 6',
+            style: Theme.of(context).textTheme.headline6,
+          ),
+          Text(
+            'Subtitle 1',
+            style: Theme.of(context).textTheme.subtitle1,
+          ),
+          Text(
+            'Subtitle 2',
+            style: Theme.of(context).textTheme.subtitle2,
           ),
           Text(
             'Caption',
             style: Theme.of(context).textTheme.caption,
           ),
           Text(
-            'Display 1',
-            style: Theme.of(context).textTheme.display1,
+            'Body Text 1',
+            style: Theme.of(context).textTheme.bodyText1,
           ),
           Text(
-            'Display 2',
-            style: Theme.of(context).textTheme.display2,
-          ),
-          Text(
-            'Display 3',
-            style: Theme.of(context).textTheme.display3,
-          ),
-          Text(
-            'Display 4',
-            style: Theme.of(context).textTheme.display4,
+            'Body Text 2',
+            style: Theme.of(context).textTheme.bodyText2,
           ),
         ],
       ),
