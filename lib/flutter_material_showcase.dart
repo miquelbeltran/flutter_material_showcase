@@ -12,27 +12,20 @@ import 'package:flutter/material.dart';
 class MaterialShowcase extends StatefulWidget {
   /// Creates a MaterialShowcase
   const MaterialShowcase({
-    Key key,
+    Key? key,
     this.tabBackgroundColor,
   }) : super(key: key);
 
   /// Color to be used under the TabBar
-  final Color tabBackgroundColor;
+  final Color? tabBackgroundColor;
 
   @override
   _MaterialShowcaseState createState() => _MaterialShowcaseState();
 }
 
 class _MaterialShowcaseState extends State<MaterialShowcase> {
-  TextEditingController _controller1;
-  TextEditingController _controller2;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller1 = TextEditingController();
-    _controller2 = TextEditingController();
-  }
+  final _controller1 = TextEditingController();
+  final _controller2 = TextEditingController();
 
   @override
   void dispose() {
@@ -70,7 +63,7 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         color: widget.tabBackgroundColor ?? Colors.black26,
-        child: TabBar(
+        child: const TabBar(
           tabs: <Widget>[
             Tab(
               text: 'Tab 1',
@@ -169,13 +162,13 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
           padding: const EdgeInsets.all(8.0),
           child: FloatingActionButton(
             onPressed: () {},
-            child: Icon(Icons.accessibility),
+            child: const Icon(Icons.accessibility),
           ),
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: IconButton(
-            icon: Icon(Icons.accessibility),
+            icon: const Icon(Icons.accessibility),
             onPressed: () {},
           ),
         ),
@@ -191,7 +184,6 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
 
   Row _buildButtonRow() {
     return Row(
-      mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         Expanded(
           child: Padding(
@@ -219,18 +211,18 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.accessibility),
-            title: const Text('Item 1'),
+            label: 'Item 1',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.accessibility),
-            title: const Text('Item 2'),
+            label: 'Item 2',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.accessibility),
-            title: const Text('Item 3'),
+            label: 'Item 3',
           ),
         ],
       ),

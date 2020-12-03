@@ -1,3 +1,7 @@
+## [2.0.0] - Null Safety
+
+* Adopted Null Safety and SDK 2.12.
+
 ## [1.1.0] - New Components
 
 * Added Calendar
