@@ -188,18 +188,27 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: RaisedButton(
+            child: ElevatedButton(
               onPressed: () {},
-              child: const Text('Raised Button'),
+              child: const Text('Elevated'),
             ),
           ),
         ),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: FlatButton(
+            child: TextButton(
               onPressed: () {},
-              child: const Text('Flat Button'),
+              child: const Text('Text'),
+            ),
+          ),
+        ),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: OutlinedButton(
+              onPressed: () {},
+              child: const Text('Outlined'),
             ),
           ),
         )
