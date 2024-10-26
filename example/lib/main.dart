@@ -22,12 +22,14 @@ class _MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Material Design Showcase'),
+          title: const Text('Material Design Showcase'),
           actions: <Widget>[
             IconButton(
-              icon: Icon(brightness == Brightness.light
-                  ? Icons.wb_sunny
-                  : Icons.brightness_2),
+              icon: Icon(
+                brightness == Brightness.light
+                    ? Icons.wb_sunny
+                    : Icons.brightness_2,
+              ),
               onPressed: () {
                 switch (brightness) {
                   case Brightness.dark:
@@ -42,11 +44,11 @@ class _MyAppState extends State<MyApp> {
                     break;
                 }
               },
-            )
+            ),
           ],
         ),
         body: ListView(
-          children: <Widget>[
+          children: const <Widget>[
             MaterialShowcase(),
           ],
         ),

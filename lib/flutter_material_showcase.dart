@@ -61,7 +61,7 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
   Widget _buildTabRow(context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
+      child: ColoredBox(
         color: widget.tabBackgroundColor ?? Colors.black26,
         child: const TabBar(
           tabs: <Widget>[
@@ -109,8 +109,8 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
   }
 
   Row _buildChoiceChipRow() {
-    return Row(
-      children: const <Widget>[
+    return const Row(
+      children: <Widget>[
         Padding(
           padding: EdgeInsets.all(8.0),
           child: ChoiceChip(
@@ -130,8 +130,8 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
   }
 
   Row _buildChipRow() {
-    return Row(
-      children: const <Widget>[
+    return const Row(
+      children: <Widget>[
         Padding(
           padding: EdgeInsets.all(8.0),
           child: Chip(
@@ -177,7 +177,7 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
           child: CircleAvatar(
             child: Text('AV'),
           ),
-        )
+        ),
       ],
     );
   }
@@ -188,21 +188,21 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: RaisedButton(
+            child: ElevatedButton(
               onPressed: () {},
-              child: const Text('Raised Button'),
+              child: const Text('Elevated Button'),
             ),
           ),
         ),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: FlatButton(
+            child: TextButton(
               onPressed: () {},
-              child: const Text('Flat Button'),
+              child: const Text('Text Button'),
             ),
           ),
-        )
+        ),
       ],
     );
   }
@@ -230,12 +230,12 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
   }
 
   Widget _buildCard() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
       child: Card(
-        child: Container(
+        child: SizedBox(
           height: 100,
-          child: const Center(
+          child: Center(
             child: Text('Material Card'),
           ),
         ),
@@ -302,48 +302,52 @@ class _MaterialShowcaseState extends State<MaterialShowcase> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'Headline 1',
-            style: Theme.of(context).textTheme.headline1,
+            'Headline Large',
+            style: Theme.of(context).textTheme.headlineLarge,
           ),
           Text(
-            'Headline 2',
-            style: Theme.of(context).textTheme.headline2,
+            'Headline Medium',
+            style: Theme.of(context).textTheme.headlineMedium,
           ),
           Text(
-            'Headline 3',
-            style: Theme.of(context).textTheme.headline3,
+            'Headline Small',
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
           Text(
-            'Headline 4',
-            style: Theme.of(context).textTheme.headline4,
+            'Title Large',
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           Text(
-            'Headline 5',
-            style: Theme.of(context).textTheme.headline5,
+            'Title Medium',
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           Text(
-            'Headline 6',
-            style: Theme.of(context).textTheme.headline6,
+            'Title Small',
+            style: Theme.of(context).textTheme.titleSmall,
           ),
           Text(
-            'Subtitle 1',
-            style: Theme.of(context).textTheme.subtitle1,
+            'Label Large',
+            style: Theme.of(context).textTheme.labelLarge,
           ),
           Text(
-            'Subtitle 2',
-            style: Theme.of(context).textTheme.subtitle2,
+            'Label Medium',
+            style: Theme.of(context).textTheme.labelMedium,
           ),
           Text(
-            'Caption',
-            style: Theme.of(context).textTheme.caption,
+            'Label Small',
+            style: Theme.of(context).textTheme.labelSmall,
           ),
           Text(
-            'Body Text 1',
-            style: Theme.of(context).textTheme.bodyText1,
+            'Body Large',
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
           Text(
-            'Body Text 2',
-            style: Theme.of(context).textTheme.bodyText2,
+            'Body Medium',
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
+          Text(
+            'Body Small',
+            style: Theme.of(context).textTheme.bodySmall,
           ),
         ],
       ),
