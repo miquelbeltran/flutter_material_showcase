@@ -32,47 +32,47 @@ class MaterialShowcase extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            ExampleSection(
+            ShowcaseSection(
               title: 'Buttons',
               child: MaterialShowcaseButtons(),
             ),
-            ExampleSection(
+            ShowcaseSection(
               title: 'Icon Buttons',
               child: MaterialShowcaseIconButtons(),
             ),
-            ExampleSection(
+            ShowcaseSection(
               title: 'Chips',
               child: MaterialShowcaseChips(),
             ),
-            ExampleSection(
+            ShowcaseSection(
               title: 'Selection Controls',
               child: MaterialShowcaseSelectionControls(),
             ),
-            ExampleSection(
+            ShowcaseSection(
               title: 'Text Inputs',
               child: MaterialShowcaseTextInputs(),
             ),
-            ExampleSection(
+            ShowcaseSection(
               title: 'Tabs',
               child: MaterialShowcaseTabs(),
             ),
-            ExampleSection(
+            ShowcaseSection(
               title: 'Bottom Navigation',
               child: MaterialShowcaseBottomNavigation(),
             ),
-            ExampleSection(
+            ShowcaseSection(
               title: 'Cards',
               child: MaterialShowcaseCards(),
             ),
-            ExampleSection(
+            ShowcaseSection(
               title: 'Date & Time Pickers',
               child: MaterialShowcaseDateTimePickers(),
             ),
-            ExampleSection(
+            ShowcaseSection(
               title: 'Dialogs',
               child: MaterialShowcaseDialogs(),
             ),
-            ExampleSection(
+            ShowcaseSection(
               title: 'Texts',
               child: MaterialShowcaseTexts(),
             ),
