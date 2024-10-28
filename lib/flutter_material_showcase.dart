@@ -28,54 +28,56 @@ class MaterialShowcase extends StatelessWidget {
   Widget build(BuildContext context) {
     return const DefaultTabController(
       length: 3,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          ExampleSection(
-            title: 'Buttons',
-            child: MaterialShowcaseButtons(),
-          ),
-          ExampleSection(
-            title: 'Icon Buttons',
-            child: MaterialShowcaseIconButtons(),
-          ),
-          ExampleSection(
-            title: 'Chips',
-            child: MaterialShowcaseChips(),
-          ),
-          ExampleSection(
-            title: 'Selection Controls',
-            child: MaterialShowcaseSelectionControls(),
-          ),
-          ExampleSection(
-            title: 'Text Inputs',
-            child: MaterialShowcaseTextInputs(),
-          ),
-          ExampleSection(
-            title: 'Tabs',
-            child: MaterialShowcaseTabs(),
-          ),
-          ExampleSection(
-            title: 'Bottom Navigation',
-            child: MaterialShowcaseBottomNavigation(),
-          ),
-          ExampleSection(
-            title: 'Cards',
-            child: MaterialShowcaseCards(),
-          ),
-          ExampleSection(
-            title: 'Date & Time Pickers',
-            child: MaterialShowcaseDateTimePickers(),
-          ),
-          ExampleSection(
-            title: 'Dialogs',
-            child: MaterialShowcaseDialogs(),
-          ),
-          ExampleSection(
-            title: 'Texts',
-            child: MaterialShowcaseTexts(),
-          ),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            ExampleSection(
+              title: 'Buttons',
+              child: MaterialShowcaseButtons(),
+            ),
+            ExampleSection(
+              title: 'Icon Buttons',
+              child: MaterialShowcaseIconButtons(),
+            ),
+            ExampleSection(
+              title: 'Chips',
+              child: MaterialShowcaseChips(),
+            ),
+            ExampleSection(
+              title: 'Selection Controls',
+              child: MaterialShowcaseSelectionControls(),
+            ),
+            ExampleSection(
+              title: 'Text Inputs',
+              child: MaterialShowcaseTextInputs(),
+            ),
+            ExampleSection(
+              title: 'Tabs',
+              child: MaterialShowcaseTabs(),
+            ),
+            ExampleSection(
+              title: 'Bottom Navigation',
+              child: MaterialShowcaseBottomNavigation(),
+            ),
+            ExampleSection(
+              title: 'Cards',
+              child: MaterialShowcaseCards(),
+            ),
+            ExampleSection(
+              title: 'Date & Time Pickers',
+              child: MaterialShowcaseDateTimePickers(),
+            ),
+            ExampleSection(
+              title: 'Dialogs',
+              child: MaterialShowcaseDialogs(),
+            ),
+            ExampleSection(
+              title: 'Texts',
+              child: MaterialShowcaseTexts(),
+            ),
+          ],
+        ),
       ),
     );
   }

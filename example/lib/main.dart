@@ -47,11 +47,7 @@ class _MyAppState extends State<MyApp> {
             ),
           ],
         ),
-        body: ListView(
-          children: const <Widget>[
-            MaterialShowcase(),
-          ],
-        ),
+        body: const MaterialShowcase(),
       ),
     );
   }
