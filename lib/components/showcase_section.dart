@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ShowcaseSection extends StatelessWidget {
-  const ShowcaseSection({
+class MaterialShowcaseSection extends StatelessWidget {
+  const MaterialShowcaseSection({
     super.key,
     required this.title,
     required this.child,

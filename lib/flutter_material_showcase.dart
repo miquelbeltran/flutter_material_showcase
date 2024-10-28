@@ -22,57 +22,63 @@ import 'package:flutter_material_showcase/components/texts.dart';
 /// The [tabBackgroundColor] will default to [Colors.black26] if not set.
 class MaterialShowcase extends StatelessWidget {
   /// Creates a MaterialShowcase
-  const MaterialShowcase({super.key});
+  const MaterialShowcase({
+    super.key,
+    this.customSections = const [],
+  });
+
+  final List<MaterialShowcaseSection> customSections;
 
   @override
   Widget build(BuildContext context) {
-    return const DefaultTabController(
+    return DefaultTabController(
       length: 3,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            ShowcaseSection(
+            ...customSections,
+            const MaterialShowcaseSection(
               title: 'Buttons',
               child: MaterialShowcaseButtons(),
             ),
-            ShowcaseSection(
+            const MaterialShowcaseSection(
               title: 'Icon Buttons',
               child: MaterialShowcaseIconButtons(),
             ),
-            ShowcaseSection(
+            const MaterialShowcaseSection(
               title: 'Chips',
               child: MaterialShowcaseChips(),
             ),
-            ShowcaseSection(
+            const MaterialShowcaseSection(
               title: 'Selection Controls',
               child: MaterialShowcaseSelectionControls(),
             ),
-            ShowcaseSection(
+            const MaterialShowcaseSection(
               title: 'Text Inputs',
               child: MaterialShowcaseTextInputs(),
             ),
-            ShowcaseSection(
+            const MaterialShowcaseSection(
               title: 'Tabs',
               child: MaterialShowcaseTabs(),
             ),
-            ShowcaseSection(
+            const MaterialShowcaseSection(
               title: 'Bottom Navigation',
               child: MaterialShowcaseBottomNavigation(),
             ),
-            ShowcaseSection(
+            const MaterialShowcaseSection(
               title: 'Cards',
               child: MaterialShowcaseCards(),
             ),
-            ShowcaseSection(
+            const MaterialShowcaseSection(
               title: 'Date & Time Pickers',
               child: MaterialShowcaseDateTimePickers(),
             ),
-            ShowcaseSection(
+            const MaterialShowcaseSection(
               title: 'Dialogs',
               child: MaterialShowcaseDialogs(),
             ),
-            ShowcaseSection(
+            const MaterialShowcaseSection(
               title: 'Texts',
               child: MaterialShowcaseTexts(),
             ),
