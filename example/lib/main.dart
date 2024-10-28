@@ -1,4 +1,6 @@
+import 'package:example/widgets/custom_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_material_showcase/components/showcase_section.dart';
 import 'package:flutter_material_showcase/flutter_material_showcase.dart';
 
 void main() => runApp(MyApp());
@@ -47,7 +49,14 @@ class _MyAppState extends State<MyApp> {
             ),
           ],
         ),
-        body: const MaterialShowcase(),
+        body: const MaterialShowcase(
+          customSections: [
+            MaterialShowcaseSection(
+              title: 'Custom Widget Section 1',
+              child: CustomWidget(),
+            ),
+          ],
+        ),
       ),
     );
   }
