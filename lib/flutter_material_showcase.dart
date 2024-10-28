@@ -20,21 +20,10 @@ import 'package:flutter_material_showcase/components/texts.dart';
 /// how it looks like with different Material Widgets.
 ///
 /// The [tabBackgroundColor] will default to [Colors.black26] if not set.
-class MaterialShowcase extends StatefulWidget {
+class MaterialShowcase extends StatelessWidget {
   /// Creates a MaterialShowcase
-  const MaterialShowcase({
-    super.key,
-    this.tabBackgroundColor,
-  });
+  const MaterialShowcase({super.key});
 
-  /// Color to be used under the TabBar
-  final Color? tabBackgroundColor;
-
-  @override
-  State<MaterialShowcase> createState() => _MaterialShowcaseState();
-}
-
-class _MaterialShowcaseState extends State<MaterialShowcase> {
   @override
   Widget build(BuildContext context) {
     return const DefaultTabController(
