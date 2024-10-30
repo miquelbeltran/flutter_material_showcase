@@ -19,9 +19,28 @@ MaterialApp(
     primarySwatch: Colors.blue,
   ),
   home: Scaffold(
-    body: ListView(
-      children: <Widget>[
-        MaterialShowcase(),
+    body: MaterialShowcase(),
+  ),
+);
+```
+
+You can also add individual component sections to your project for preview like `MaterialShowcaseButtons()` widget. For complete list of available widgets, checkout `lib/components` folder.
+
+If you have custom themed widgets, you can also preview them in the showcase by adding `MaterialShowcaseSection` in  `customSections` property:
+```dart
+MaterialApp(
+  title: 'Flutter Demo',
+  theme: ThemeData(
+    primarySwatch: Colors.blue,
+  ),
+  home: Scaffold(
+    body: MaterialShowcase(
+      customSections: [
+        // You can add multiple sections here
+        MaterialShowcaseSection(
+          title: 'Custom Widget Section 1',
+          child: CustomWidget(),
+        ),
       ],
     ),
   ),
@@ -40,10 +59,7 @@ Then play with the different parameters in `ThemeData` and see how it looks like
 ```
 MIT License
 
-Copyright (c) 2019 Miguel Beltran
+Copyright (c) 2024 Miguel Beltran
 ```
 
 Miguel Beltran - [beltran.work](https://beltran.work)
-
-
-
