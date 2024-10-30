@@ -24,7 +24,7 @@ MaterialApp(
 );
 ```
 
-> You can also add individual component sections to your project for preview like `MaterialShowcaseButtons()` widget. For complete list of available widgets, checkout `lib/components` folder.
+You can also add individual component sections to your project for preview like `MaterialShowcaseButtons()` widget. For complete list of available widgets, checkout `lib/components` folder.
 
 If you have custom themed widgets, you can also preview them in the showcase by adding `MaterialShowcaseSection` in  `customSections` property:
 ```dart
