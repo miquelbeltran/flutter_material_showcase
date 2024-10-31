@@ -1,3 +1,12 @@
+## [3.0.0] - Material 3 and customization
+
+- Updated documentation to reflect latest developments (#7) (2024-10-30)
+- Add custom widgets to showcase (#6) (2024-10-29)
+- Widget completeness & Restructuring (#5) (2024-10-28)
+- Migration to latest Flutter version (#4) (2024-10-28)
+
+Thanks to (Taosif7)[https://github.com/Taosif7] for all these changes!
+
 ## [2.0.0] - Null Safety
 
 * Adopted Null Safety and SDK 2.12.
